@@ -89,7 +89,8 @@ const exportComponent = (node, {
             );
             pdf.save(fileName);
         } else {
-            saveAs(canvas.toDataURL(type, 1.0), fileName);
+            // saveAs(canvas.toDataURL(type, 1.0), fileName);
+            return canvas.toDataURL(type, 1.0)
         }
     });
 };
